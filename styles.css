@@ -62,6 +62,8 @@ body {
     overflow-x: hidden;
     position: relative;
     min-height: 100vh;
+    width: 100vw;
+    max-width: 100%;
 }
 
 /* Base Body pseudo-element for noise/texture if desired */
@@ -1249,10 +1251,7 @@ img {
     }
     
     .header-contact .contact-btn {
-        padding: 10px;
-        width: 45px;
-        height: 45px;
-        border-radius: 50%;
+        display: none; /* Removed completely on mobile per user request */
     }
     
     .hero {
@@ -1270,9 +1269,41 @@ img {
     }
 
     .hero-title {
-        font-size: 2.2rem;
+        font-size: 1.5rem; /* Further reduced size to prevent wrapping */
         margin-top: 10px;
         text-shadow: 0 5px 15px rgba(0,0,0,0.9);
+        letter-spacing: 0px;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.9rem; /* Reduced size */
+        margin-bottom: 25px;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        padding: 0 20px;
+        gap: 15px; 
+    }
+    
+    .hero-buttons .btn {
+        padding: 10px 15px;
+        font-size: 0.8rem; /* Smaller button text */
+    }
+    
+    /* Adjust Mandalas for mobile to prevent central overlap */
+    .mandala-hero-left {
+        left: -200px;
+        width: 300px;
+        height: 300px;
+        opacity: 0.2;
+    }
+    
+    .mandala-hero-right {
+        right: -200px;
+        width: 300px;
+        height: 300px;
+        opacity: 0.2;
     }
     
     .hero-subtitle {
