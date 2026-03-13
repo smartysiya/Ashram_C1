@@ -343,8 +343,12 @@ img {
     transform: translateY(-50%);
     width: 400px;
     height: 400px;
-    opacity: 0.15;
-    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path fill="none" stroke="%23D4AF37" stroke-width="0.8" d="M50,10 C50,10 60,30 80,30 C80,30 65,45 85,60 C85,60 65,65 50,90 C50,90 35,65 15,60 C15,60 35,45 20,30 C20,30 40,30 50,10 Z"/><circle cx="50" cy="50" r="25" fill="none" stroke="%23D4AF37" stroke-width="1"/><circle cx="50" cy="50" r="10" fill="none" stroke="%23D4AF37" stroke-width="2"/><circle cx="50" cy="50" r="4" fill="%23D4AF37"/></svg>');
+    opacity: 0.3;
+    background-image: url('assets/golden_mandala_detailed.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    mix-blend-mode: screen;
 }
 
 .mandala-hero-right {
@@ -353,8 +357,12 @@ img {
     transform: translateY(-50%);
     width: 400px;
     height: 400px;
-    opacity: 0.15;
-    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path fill="none" stroke="%23D4AF37" stroke-width="0.8" d="M50,10 C50,10 60,30 80,30 C80,30 65,45 85,60 C85,60 65,65 50,90 C50,90 35,65 15,60 C15,60 35,45 20,30 C20,30 40,30 50,10 Z"/><circle cx="50" cy="50" r="25" fill="none" stroke="%23D4AF37" stroke-width="1"/><circle cx="50" cy="50" r="10" fill="none" stroke="%23D4AF37" stroke-width="2"/><circle cx="50" cy="50" r="4" fill="%23D4AF37"/></svg>');
+    opacity: 0.3;
+    background-image: url('assets/golden_mandala_detailed.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    mix-blend-mode: screen;
 }
 
 .top-right { top: 20px; right: 20px; width: 100px; height: 100px; }
@@ -624,13 +632,7 @@ img {
     /* Soften the edges to blend */
     mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
     -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
-    animation: floatGoddess 6s ease-in-out infinite;
-}
-
-@keyframes floatGoddess {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0px); }
+    /* Animation stopped per user request */
 }
 
 .hero-background {
@@ -1254,16 +1256,23 @@ img {
     }
     
     .hero {
-        padding-top: 100px;
+        padding-top: 130px;
+        min-height: auto; /* allow text to flow naturally */
+    }
+    
+    .hero-image-wrapper {
+        margin-bottom: 20px;
+        margin-top: 10px;
     }
     
     .hero-durga-img {
-        max-height: 40vh;
+        max-height: 35vh;
     }
 
     .hero-title {
         font-size: 2.2rem;
         margin-top: 10px;
+        text-shadow: 0 5px 15px rgba(0,0,0,0.9);
     }
     
     .hero-subtitle {
