@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meditation & Yoga - Aadi Shakti Devi Maa Ashram</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .page-header {
+            padding-top: 150px;
+            padding-bottom: 50px;
+            text-align: center;
+            background: linear-gradient(to bottom, rgba(122, 0, 0, 0.4), transparent);
+        }
+
+        .content-section {
+            padding: 50px 0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .content-card {
+            background: rgba(10, 0, 0, 0.6);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 12px;
+            padding: 40px;
+            margin-bottom: 30px;
+        }
+
+        .meditation-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .meditation-type {
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            background: rgba(255,255,255,0.02);
+            transition: all var(--transition-normal);
+        }
+
+        .meditation-type:hover {
+            border-color: var(--accent-gold);
+            transform: translateY(-5px);
+            background: rgba(212, 175, 55, 0.05);
+        }
+
+        .meditation-type i {
+            font-size: 2rem;
+            color: var(--secondary-orange);
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .meditation-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 1. Header (Simplified) -->
+    <header class="header">
+        <div class="header-top">
+            <div class="logo">
+                <i class="fa-solid fa-om trishul-icon"></i>
+            </div>
+            
+            <div class="site-title">
+                <h1><a href="index.html">AADI SAKTI DEVI MAA ASHRAM</a></h1>
+            </div>
+            
+            <div class="header-contact">
+                <a href="index.html" class="btn btn-outline-gold rounded-btn">Back to Home</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="hero-title" style="font-size: 2.5rem; margin-bottom: 20px;">Meditation & Yoga</h1>
+            <div class="ornament-divider"></div>
+            <p style="color: var(--text-gray); max-width: 600px; margin: 20px auto;">Connect with your inner divine light through ancient yogic practices taught by our experienced awakened swamis.</p>
+        </div>
+    </section>
+
+    <!-- 3. Main Content -->
+    <section class="content-section">
+        <div class="container">
+            
+            <div class="content-card">
+                <h3 style="color: var(--accent-gold); margin-bottom: 20px; font-family: var(--font-heading);">The Philosophy of Inner Union</h3>
+                <p>Yoga is not just a physical practice; it is the journey of the self, through the self, to the self. At the Aadi Shakti Ashram, we teach traditional Hatha Yoga and extensive guided Meditation specifically aimed at Kundalini awakening and spiritual balance.</p>
+                <p>We welcome seekers of all levels—whether you are looking to find simple mental peace away from the chaotic world or seeking deep spiritual enlightenment.</p>
+            </div>
+
+            <h3 style="text-align: center; margin: 40px 0 20px; font-family: var(--font-heading);">Our Programs</h3>
+            
+            <div class="meditation-grid">
+                <div class="meditation-type">
+                    <i class="fa-solid fa-spa"></i>
+                    <h4>Beginner's Dhyana</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-gray);">Introduction to breathwork (Pranayama), mindfulness, and seated postures. Perfect for stress relief.</p>
+                    <span style="color: var(--accent-gold); font-weight: bold;">Daily at 6:00 AM</span>
+                </div>
+                <div class="meditation-type">
+                    <i class="fa-solid fa-fire-flame-curved"></i>
+                    <h4>Kundalini Activation</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-gray);">Advanced guided meditation focusing on the chakras. Requires previous meditation experience.</p>
+                    <span style="color: var(--accent-gold); font-weight: bold;">Tues & Thurs at 5:00 PM</span>
+                </div>
+                <div class="meditation-type">
+                    <i class="fa-solid fa-om"></i>
+                    <h4>Mantra Yoga</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-gray);">Healing through the science of sound. Learn the proper pronunciation and chanting of Vedic mantras.</p>
+                    <span style="color: var(--accent-gold); font-weight: bold;">Wednesdays at 4:00 PM</span>
+                </div>
+                <div class="meditation-type">
+                    <i class="fa-solid fa-leaf"></i>
+                    <h4>Silent Retreats</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-gray);">Weekend vows of silence (Mauna) spent entirely within the ashram grounds for deep introspection.</p>
+                    <span style="color: var(--accent-gold); font-weight: bold;">Monthly</span>
+                </div>
+            </div>
+
+            <div class="text-center" style="margin-top: 50px;">
+                <h4 style="margin-bottom: 20px;">Ready to start your journey?</h4>
+                <a href="index.html#contact" class="btn btn-gold-filled rounded-btn" style="padding: 15px 30px; font-size: 1.1rem;">Register for a Class</a>
+            </div>
+
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 20px; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 50px;">
+        <p style="color: var(--text-gray); font-size: 0.9rem;">&copy; 2026 Aadi Shakti Devi Maa Ashram. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

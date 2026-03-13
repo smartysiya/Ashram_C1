@@ -308,17 +308,21 @@ img {
 }
 
 .ornament-divider::after {
-    content: '\f65f'; /* Om symbol in fontawesome */
-    font-family: 'Font Awesome 6 Free';
-    font-weight: 900;
+    content: '';
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: var(--bg-black);
-    padding: 0 10px;
-    color: var(--accent-gold);
-    font-size: 1.2rem;
+    width: 45px;
+    height: 45px;
+    background-image: url('assets/ornament_om.png');
+    background-color: var(--bg-black);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    mix-blend-mode: screen;
+    padding: 0 15px; /* Creates spacing from the line */
+    border-radius: 50%;
 }
 
 /* Mandala Decorations */

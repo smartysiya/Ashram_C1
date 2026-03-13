@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Puja & Aarti - Aadi Shakti Devi Maa Ashram</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS (Reusing main styles) -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .page-header {
+            padding-top: 150px;
+            padding-bottom: 50px;
+            text-align: center;
+            background: linear-gradient(to bottom, rgba(122, 0, 0, 0.4), transparent);
+        }
+
+        .content-section {
+            padding: 50px 0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .content-card {
+            background: rgba(10, 0, 0, 0.6);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 12px;
+            padding: 40px;
+            margin-bottom: 30px;
+        }
+
+        .puja-schedule {
+            list-style: none;
+            padding: 0;
+        }
+
+        .puja-schedule li {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 1.1rem;
+        }
+
+        .puja-schedule li:last-child {
+            border-bottom: none;
+        }
+
+        .time {
+            color: var(--accent-gold);
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 1. Header (Simplified for subpages) -->
+    <header class="header">
+        <div class="header-top">
+            <div class="logo">
+                <i class="fa-solid fa-om trishul-icon"></i>
+            </div>
+            
+            <div class="site-title">
+                <h1><a href="index.html">AADI SAKTI DEVI MAA ASHRAM</a></h1>
+            </div>
+            
+            <div class="header-contact">
+                <a href="index.html" class="btn btn-outline-gold rounded-btn">Back to Home</a>
+                <button class="mobile-menu-btn" aria-label="Toggle Menu" style="display:none;">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="hero-title" style="font-size: 2.5rem; margin-bottom: 20px;">Daily Puja & Aarti</h1>
+            <div class="ornament-divider"></div>
+            <p style="color: var(--text-gray); max-width: 600px; margin: 20px auto;">Experience the divine presence through our daily rituals and sacred chanting ceremonies.</p>
+        </div>
+    </section>
+
+    <!-- 3. Main Content -->
+    <section class="content-section">
+        <div class="container">
+            
+            <div class="content-card">
+                <h3 style="color: var(--accent-gold); margin-bottom: 20px; font-family: var(--font-heading);">About Our Daily Rituals</h3>
+                <p>The Aadi Shakti Devi Maa Ashram conducts daily authentic Vedic rituals to invoke the blessings of the Divine Mother. These ceremonies are performed by our highly trained resident priests using pure ingredients and strict adherence to traditional scriptures.</p>
+                <p>Participating in or witnessing these daily pujas helps purify the mind, cleanse spiritual blockages, and brings immense peace and prosperity to devotees.</p>
+            </div>
+
+            <div class="content-card">
+                <h3 style="color: var(--accent-gold); margin-bottom: 20px; font-family: var(--font-heading);"><i class="fa-solid fa-clock"></i> Daily Schedule</h3>
+                <ul class="puja-schedule">
+                    <li>
+                        <span><strong>Mangala Aarti</strong> <br><small style="color:var(--text-gray)">Waking the deity</small></span>
+                        <span class="time">05:30 AM</span>
+                    </li>
+                    <li>
+                        <span><strong>Shringar & Main Puja</strong> <br><small style="color:var(--text-gray)">Bathing and adorning the Goddess</small></span>
+                        <span class="time">07:00 AM</span>
+                    </li>
+                    <li>
+                        <span><strong>Rajbhog Aarti</strong> <br><small style="color:var(--text-gray)">Midday offering</small></span>
+                        <span class="time">12:00 PM</span>
+                    </li>
+                    <li>
+                        <span><strong>Sandhya Aarti</strong> <br><small style="color:var(--text-gray)">Evening prayers with divine lighting</small></span>
+                        <span class="time">07:00 PM</span>
+                    </li>
+                    <li>
+                        <span><strong>Shayan Aarti</strong> <br><small style="color:var(--text-gray)">Resting ceremony</small></span>
+                        <span class="time">09:00 PM</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="text-center" style="margin-top: 40px;">
+                <h4 style="margin-bottom: 20px;">Wish to sponsor a daily Puja?</h4>
+                <a href="index.html#donate" class="btn btn-gold-filled rounded-btn" style="padding: 15px 30px; font-size: 1.1rem;">Sponsor a Puja</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 4. Footer -->
+    <footer style="text-align: center; padding: 20px; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 50px;">
+        <p style="color: var(--text-gray); font-size: 0.9rem;">&copy; 2026 Aadi Shakti Devi Maa Ashram. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
