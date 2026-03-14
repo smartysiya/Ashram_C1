@@ -12,6 +12,18 @@ document.addEventListener('DOMContentLoaded', () => {
         offset: 100
     });
 
+    // Sync Hindi toggle state on load - Commented out
+    /*
+    setTimeout(() => {
+        const translateCombo = document.querySelector('.goog-te-combo');
+        const btn = document.getElementById('hindi-toggle');
+        if (translateCombo && btn && translateCombo.value === 'hi') {
+            btn.innerHTML = '<i class="fa-solid fa-language"></i> English';
+            btn.classList.add('active-hi');
+        }
+    }, 1500);
+    */
+
     // 1. Header Scroll Effect
     const header = document.querySelector('.header');
     
@@ -187,8 +199,9 @@ function createSingleParticle(container) {
 }
 
 /**
- * Hindi Translation Toggle Logic
+ * Hindi Translation Toggle Logic - Commented out
  */
+/*
 function toggleHindi() {
     const btn = document.getElementById('hindi-toggle');
     const translateCombo = document.querySelector('.goog-te-combo');
@@ -197,7 +210,7 @@ function toggleHindi() {
         // Find current language
         const currentLang = translateCombo.value;
         
-        if (currentLang === 'hi') {
+        if (currentLang === 'hi' || document.documentElement.lang === 'hi') {
             // Switch to English
             translateCombo.value = 'en';
             btn.innerHTML = '<i class="fa-solid fa-language"></i> हिन्दी';
@@ -212,6 +225,8 @@ function toggleHindi() {
         // Trigger change event to notify Google Translate
         translateCombo.dispatchEvent(new Event('change'));
     } else {
-        console.warn("Google Translate widget not fully loaded yet.");
+        // If combo isn't there, maybe it's still loading or blocked
+        alert("Translation service is initializing. Please wait a moment and try again.");
     }
 }
+*/

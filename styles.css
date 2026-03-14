@@ -218,6 +218,7 @@ img {
     box-shadow: var(--shadow-gold);
 }
 
+/* Translation Button Styles - Commented out
 .translation-btn {
     padding: 10px 20px !important;
     margin-right: 15px;
@@ -230,7 +231,7 @@ img {
     color: var(--bg-black) !important;
 }
 
-/* Hide Google Translate Banner */
+/* Hide Google Translate Banner - Commented out
 .goog-te-banner-frame.skiptranslate, .goog-te-gadget-icon {
     display: none !important;
 }
@@ -240,6 +241,7 @@ body {
 .goog-te-menu-value {
     display: none !important;
 }
+*/
 
 
 .rounded-btn {
