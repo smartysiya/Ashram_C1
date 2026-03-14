@@ -48,7 +48,9 @@
         .ev-img {
             background-size: cover;
             background-position: center;
-            min-height: 250px;
+            min-height: 260px;
+            /* Ensure background image is actually painted */
+            background-color: rgba(26,4,4,0.9);
         }
 
         .ev-body {
@@ -137,15 +139,31 @@
             .ev-img {
                 height: 220px;
                 min-height: unset;
+                border-radius: 14px 14px 0 0;
             }
 
             .ev-body {
-                padding: 22px 18px;
+                padding: 20px 16px;
+            }
+
+            .ev-title-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
             }
 
             .ev-title {
-                font-size: 1.2rem;
+                font-size: 1.15rem;
             }
+
+            /* Back button: show short text on mobile */
+            .back-btn-full { display: none; }
+            .back-btn-short { display: inline; }
+        }
+
+        @media (min-width: 769px) {
+            .back-btn-short { display: none; }
+            .back-btn-full { display: inline; }
         }
     </style>
 </head>
@@ -161,7 +179,10 @@
                 <h1><a href="index.html">AADI SHAKTI DEVI MAA ASHRAM</a></h1>
             </div>
             <div class="header-contact">
-                <a href="index.html" class="btn btn-outline-gold rounded-btn">&larr; Back to Home</a>
+                <a href="index.html" class="btn btn-outline-gold rounded-btn">
+                    <span class="back-btn-full">&larr; Back to Home</span>
+                    <span class="back-btn-short">&larr; Back</span>
+                </a>
             </div>
         </div>
     </header>
@@ -204,7 +225,7 @@
                         <li>Free Prashadam dining (Bhandara) every day</li>
                     </ul>
                     <div>
-                        <a href="index.html#contact" class="btn btn-gold-filled" style="display: inline-block;">RSVP &amp; Volunteer</a>
+                        <a href="index.html#contact" class="btn btn-gold-filled" style="display: inline-block;">Register / Join Us</a>
                     </div>
                 </div>
             </div>
@@ -242,7 +263,7 @@
                     <p class="ev-time"><i class="fa-regular fa-clock"></i>&nbsp; 06:00 PM – 10:00 PM</p>
                     <p class="ev-desc">Celebrate the festival of lights as we adorn the entire Ashram with thousands of earthen diyas. Special Lakshmi and Kali Puja will be conducted at midnight to usher in prosperity and destroy ignorance.</p>
                     <div>
-                        <a href="index.html#contact" class="btn btn-gold-filled" style="display: inline-block;">RSVP for Aarti</a>
+                        <a href="index.html#contact" class="btn btn-gold-filled" style="display: inline-block;">Join the Aarti — Register</a>
                     </div>
                 </div>
             </div>

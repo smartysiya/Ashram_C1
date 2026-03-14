@@ -942,6 +942,28 @@ img {
     animation: float 6s ease-in-out infinite;
 }
 
+/* On mobile: logo appears first (top), text below */
+@media (max-width: 768px) {
+    .pryyas-grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pryyas-grid .pryyas-logo-wrapper {
+        order: 1;
+        text-align: center;
+    }
+
+    .pryyas-grid .pryyas-intro-text {
+        order: 2;
+    }
+
+    .pryyas-logo-img {
+        max-width: 220px;
+        margin: 0 auto;
+    }
+}
+
 .pillar-list {
     list-style: none;
     padding: 0;
