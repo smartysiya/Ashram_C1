@@ -779,9 +779,8 @@ img {
     transition: transform var(--transition-slow);
 }
 
-.bg-temple { background-image: url('https://images.unsplash.com/photo-1621217646141-8edce03d8d64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'); }
+.bg-temple { background-image: url('assets/sacred_temple.jpg'); background-position: center 20%; }
 .bg-ashram { background-image: url('https://images.unsplash.com/photo-1545674068-154a1be7d25e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'); }
-.bg-retreat { background-image: url('https://images.unsplash.com/photo-1593811167562-9cef47bfc4d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'); }
 
 .image-card::after {
     content: '';
