@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRYYAS Trust - Aadi Shakti Devi Maa Ashram</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS (Reusing main styles) -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .page-header {
+            padding-top: 150px;
+            padding-bottom: 50px;
+            text-align: center;
+            background: linear-gradient(to bottom, rgba(122, 0, 0, 0.4), transparent);
+        }
+
+        .content-section {
+            padding: 50px 0;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .pryyas-hero-card {
+            background: rgba(10, 0, 0, 0.6);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 12px;
+            padding: 50px;
+            margin-bottom: 50px;
+            box-shadow: var(--shadow-gold);
+            text-align: center;
+        }
+
+        .pryyas-hero-logo {
+            max-width: 250px;
+            margin-bottom: 30px;
+            filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.4));
+        }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .pillar-card {
+            background: rgba(20, 5, 5, 0.8);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-gold);
+        }
+
+        .pillar-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-bottom: 2px solid var(--accent-gold);
+        }
+
+        .pillar-content {
+            padding: 30px;
+        }
+
+        .pillar-content h3 {
+            color: var(--accent-gold);
+            margin-bottom: 15px;
+            font-family: var(--font-heading);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .pillar-content p {
+            color: var(--text-gray);
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        @media (max-width: 768px) {
+            .pillars-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 1. Header (Simplified for subpages) -->
+    <header class="header">
+        <div class="header-top">
+            <div class="logo">
+                <i class="fa-solid fa-om trishul-icon"></i>
+            </div>
+            
+            <div class="site-title">
+                <h1><a href="index.html">AADI SAKTI DEVI MAA ASHRAM</a></h1>
+            </div>
+            
+            <div class="header-contact">
+                <a href="index.html" class="btn btn-outline-gold rounded-btn">Back to Home</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="hero-title" style="font-size: 2.5rem; margin-bottom: 20px;">PRYYAS Trust</h1>
+            <div class="ornament-divider"></div>
+            <p style="color: var(--text-gray); max-width: 700px; margin: 20px auto;">Environment Protection, Yoga, Yajna, and Ayurveda Conservation Trust</p>
+        </div>
+    </section>
+
+    <!-- 3. Main Content -->
+    <section class="content-section">
+        <div class="container">
+            
+            <div class="pryyas-hero-card">
+                <img src="assets/pryyas_logo.png" alt="PRYYAS Trust" class="pryyas-hero-logo">
+                <h3 style="color: var(--accent-gold); margin-bottom: 20px; font-family: var(--font-heading); font-size: 1.8rem;">Prakruti Rakshan, Yoga, Yagya, Ayurveda Sanrakshan</h3>
+                <p style="color: var(--text-gray); font-size: 1.1rem; line-height: 1.8; max-width: 800px; margin: 0 auto;">
+                    Founded by Her Holiness Sri Sri 1008 Mahamandaleshwar Devi Maa Shivanginand Giri Ji, the PRYYAS Trust is an organization dedicated to the holistic upliftment of society and nature. We believe that true spiritual awakening is intimately connected with our environment, our physical health, and ancient wisdom. Through our four core pillars, we strive to bring balance and harmony to the world.
+                </p>
+            </div>
+
+            <div class="text-center mt-5">
+                <h2 style="font-family: var(--font-heading); color: var(--text-white); font-size: 2.2rem;">Our Four Pillars</h2>
+                <div class="ornament-divider mx-auto" style="width: 50px; background-size: cover;"></div>
+            </div>
+
+            <div class="pillars-grid">
+                
+                <!-- Pillar 1 -->
+                <div class="pillar-card">
+                    <img src="assets/environment_pillar.png" alt="Environment Protection" class="pillar-image">
+                    <div class="pillar-content">
+                        <h3><i class="fa-solid fa-leaf text-green"></i> Environment (Prakruti Rakshan)</h3>
+                        <p>We believe that serving nature is serving the Divine. Our initiatives include massive reforestation drives, river cleaning projects, and promoting sustainable, eco-friendly living practices. The Kashmir-to-Kanyakumari Environmental Foot March led by our founder is a testament to this unwavering commitment.</p>
+                    </div>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="pillar-card">
+                    <img src="assets/yoga_pillar.png" alt="Yoga" class="pillar-image">
+                    <div class="pillar-content">
+                        <h3><i class="fa-solid fa-person-praying text-orange"></i> Yoga</h3>
+                        <p>Yoga is the union of the individual consciousness with the universal consciousness. We offer regular yoga and meditation retreats, bringing ancient yogic sciences to the modern world to foster physical health, mental peace, and spiritual realization.</p>
+                    </div>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="pillar-card">
+                    <img src="assets/yajna_pillar.png" alt="Yajna" class="pillar-image">
+                    <div class="pillar-content">
+                        <h3><i class="fa-solid fa-fire text-red"></i> Yajna (Yagya)</h3>
+                        <p>Scientific and spiritual purification through sacred fire. Yajna is an ancient Vedic practice that purifies the atmosphere and the self. We organize grand 108 and 1008 Kundiya Yajnas to generate positive cosmic energy, invoking blessings for world peace and universal prosperity.</p>
+                    </div>
+                </div>
+
+                <!-- Pillar 4 -->
+                <div class="pillar-card">
+                    <img src="assets/ayurveda_pillar.png" alt="Ayurveda" class="pillar-image">
+                    <div class="pillar-content">
+                        <h3><i class="fa-solid fa-mortar-pestle text-gold"></i> Ayurveda</h3>
+                        <p>Preserving and promoting the ancient science of life. We focus on natural healing, awareness of medicinal plants, and holistic health practices. Our ashram maintains herbal gardens and provides Ayurvedic consultations to help individuals live in harmony with nature.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 4. Footer -->
+    <footer style="text-align: center; padding: 20px; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 50px;">
+        <p style="color: var(--text-gray); font-size: 0.9rem;">&copy; 2026 Aadi Shakti Devi Maa Ashram. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

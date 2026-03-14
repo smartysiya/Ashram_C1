@@ -923,6 +923,52 @@ img {
 }
 
 /*======================================================
+   PRYYAS Trust Section
+======================================================*/
+.pryyas-trust {
+    position: relative;
+    overflow: hidden;
+}
+
+.pryyas-logo-wrapper {
+    position: relative;
+    padding: 20px;
+}
+
+.pryyas-logo-img {
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.4));
+    animation: float 6s ease-in-out infinite;
+}
+
+.pillar-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.pillar-list li {
+    font-size: 1.1rem;
+    color: var(--text-gray);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.pillar-list li i {
+    font-size: 1.5rem;
+    width: 30px;
+    text-align: center;
+}
+
+/* Color utilities for icons */
+.text-green { color: #4CAF50 !important; }
+.text-red { color: #f44336 !important; }
+.text-orange { color: #ff9800 !important; }
+
+/*======================================================
    Upcoming Events Section
 ======================================================*/
 
