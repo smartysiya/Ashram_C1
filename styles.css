@@ -455,6 +455,7 @@ img {
     font-size: 2.5rem;
     color: var(--accent-gold);
     filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.5));
+    margin-right: 14px;
 }
 
 .site-title {
