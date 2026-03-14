@@ -1364,6 +1364,12 @@ img {
     .footer-grid {
         gap: 30px;
     }
+
+    /* Logo appears first on tablet */
+    .footer-brand {
+        order: -1;
+        grid-column: 1 / -1;
+    }
     
     .horizontal-card {
         grid-template-columns: 200px 1fr;
@@ -1500,6 +1506,37 @@ img {
         font-size: 2.2rem;
     }
     
+    /* Footer responsive fixes */
+    .footer-brand {
+        order: -1;  /* Logo/brand appears FIRST on mobile */
+        text-align: center;
+    }
+
+    .footer-brand .logo {
+        justify-content: center;
+    }
+
+    .footer-brand .trishul-icon {
+        font-size: 1.8rem;   /* Smaller Om icon on mobile */
+        margin-right: 10px;
+    }
+
+    .footer-brand .logo h2 {
+        font-size: 1.2rem;   /* Smaller logo text on mobile */
+    }
+
+    .footer-links {
+        display: none;       /* Hide Quick Links on mobile */
+    }
+
+    /* Center event Register button on mobile */
+    .event-action {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+
     .footer-bottom {
         flex-direction: column;
         align-items: center;
