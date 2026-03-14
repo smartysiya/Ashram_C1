@@ -956,6 +956,7 @@ img {
     }
 
     .pryyas-logo-img {
+        display: block;
         max-width: 180px; /* Slightly smaller on mobile as requested */
         margin: 0 auto;
     }
