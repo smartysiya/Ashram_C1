@@ -218,6 +218,30 @@ img {
     box-shadow: var(--shadow-gold);
 }
 
+.translation-btn {
+    padding: 10px 20px !important;
+    margin-right: 15px;
+    font-size: 0.9rem !important;
+    white-space: nowrap;
+}
+
+.active-hi {
+    background: var(--accent-gold) !important;
+    color: var(--bg-black) !important;
+}
+
+/* Hide Google Translate Banner */
+.goog-te-banner-frame.skiptranslate, .goog-te-gadget-icon {
+    display: none !important;
+}
+body {
+    top: 0px !important;
+}
+.goog-te-menu-value {
+    display: none !important;
+}
+
+
 .rounded-btn {
     border-radius: 30px;
     padding: 12px 30px;

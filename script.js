@@ -185,3 +185,33 @@ function createSingleParticle(container) {
         createSingleParticle(container);
     });
 }
+
+/**
+ * Hindi Translation Toggle Logic
+ */
+function toggleHindi() {
+    const btn = document.getElementById('hindi-toggle');
+    const translateCombo = document.querySelector('.goog-te-combo');
+    
+    if (translateCombo) {
+        // Find current language
+        const currentLang = translateCombo.value;
+        
+        if (currentLang === 'hi') {
+            // Switch to English
+            translateCombo.value = 'en';
+            btn.innerHTML = '<i class="fa-solid fa-language"></i> हिन्दी';
+            btn.classList.remove('active-hi');
+        } else {
+            // Switch to Hindi
+            translateCombo.value = 'hi';
+            btn.innerHTML = '<i class="fa-solid fa-language"></i> English';
+            btn.classList.add('active-hi');
+        }
+        
+        // Trigger change event to notify Google Translate
+        translateCombo.dispatchEvent(new Event('change'));
+    } else {
+        console.warn("Google Translate widget not fully loaded yet.");
+    }
+}

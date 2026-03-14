@@ -68,11 +68,19 @@
             </div>
             
             <div class="site-title">
-                <h1><a href="index.html">AADI SAKTI DEVI MAA ASHRAM</a></h1>
+                <h1><a href="index.html">AADI SHAKTI DEVI MAA ASHRAM</a></h1>
             </div>
             
             <div class="header-contact">
-                <a href="index.html" class="btn btn-outline-gold rounded-btn">Back to Home</a>
+                <div id="google_translate_element" style="display:none"></div>
+                <!-- Hindi Toggle Button -->
+                <button id="hindi-toggle" class="btn btn-outline-gold rounded-btn translation-btn" onclick="toggleHindi()">
+                    <i class="fa-solid fa-language"></i> हिन्दी
+                </button>
+                <a href="index.html" class="btn btn-outline-gold rounded-btn">
+                    <span class="back-text-full">&larr; Back to Home</span>
+                    <span class="back-text-short">&larr; Back</span>
+                </a>
                 <button class="mobile-menu-btn" aria-label="Toggle Menu" style="display:none;">
                     <i class="fa-solid fa-bars"></i>
                 </button>
@@ -138,5 +146,19 @@
         <p style="color: var(--text-gray); font-size: 0.9rem;">&copy; 2026 Aadi Shakti Devi Maa Ashram. All rights reserved.</p>
     </footer>
 
+    <script src="script.js"></script>
+
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'hi,en',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
