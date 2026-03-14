@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Founder & Spiritual Leader - Aadi Shakti Devi Maa Ashram</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS (Reusing main styles) -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .page-header {
+            padding-top: 150px;
+            padding-bottom: 50px;
+            text-align: center;
+            background: linear-gradient(to bottom, rgba(122, 0, 0, 0.4), transparent);
+        }
+
+        .content-section {
+            padding: 50px 0;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .founder-featured-card {
+            background: rgba(10, 0, 0, 0.6);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 12px;
+            padding: 50px;
+            margin-bottom: 50px;
+            box-shadow: var(--shadow-gold);
+        }
+
+        .founder-top-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .hero-img-container {
+            border-radius: 12px;
+            overflow: hidden;
+            border: 2px solid var(--accent-gold);
+            background: rgba(212, 175, 55, 0.1);
+        }
+
+        .hero-img-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+        }
+
+        .bio-text {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .bio-text p {
+            margin-bottom: 20px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .gallery-item {
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            height: 300px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-slow);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .founder-top-grid, .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            .gallery-item {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 1. Header (Simplified for subpages) -->
+    <header class="header">
+        <div class="header-top">
+            <div class="logo">
+                <i class="fa-solid fa-om trishul-icon"></i>
+            </div>
+            
+            <div class="site-title">
+                <h1><a href="index.html">AADI SAKTI DEVI MAA ASHRAM</a></h1>
+            </div>
+            
+            <div class="header-contact">
+                <a href="index.html" class="btn btn-outline-gold rounded-btn">Back to Home</a>
+                <button class="mobile-menu-btn" aria-label="Toggle Menu" style="display:none;">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="hero-title" style="font-size: 2.5rem; margin-bottom: 20px;">Founder & Spiritual Leader</h1>
+            <div class="ornament-divider"></div>
+            <p style="color: var(--text-gray); max-width: 600px; margin: 20px auto;">Discover the inspiring journey of our founder and visionary, dedicated to spiritual awakening and universal welfare.</p>
+        </div>
+    </section>
+
+    <!-- 3. Main Content -->
+    <section class="content-section">
+        <div class="container">
+            
+            <div class="founder-featured-card">
+                <div class="founder-top-grid">
+                    <div class="hero-img-container">
+                        <img src="assets/founder2.png" alt="Devi Maa Shivanginand Giri Ji by the Ganges">
+                    </div>
+                    
+                    <div class="bio-text">
+                        <h3 style="color: var(--accent-gold); margin-bottom: 5px; font-family: var(--font-heading); font-size: 1.8rem;">Her Holiness Sri Sri 1008 Mahamandaleshwar</h3>
+                        <h2 style="color: var(--text-white); margin-bottom: 25px; font-size: 2.2rem;">Devi Maa Shivanginand Giri Ji</h2>
+                        
+                        <p>Her Holiness Sri Sri 1008 Mahamandaleshwar Devi Maa Shivanginand Giri Ji is a revered spiritual leader of Shri Panchdashnam Juna Akhara, Ujjain. A writer, social worker, environmental guardian, and compassionate soul, she renounced worldly life at the age of 21 to dedicate herself to yoga, yajna, Ayurveda, and environmental protection.</p>
+                        
+                        <p>She is the Founder of the Environment Protection, Yoga, Yajna and Ayurveda Conservation Trust and leads several welfare initiatives from her Bhopal Ashram.</p>
+                        
+                        <p>Her major works include the Kashmir-to-Kanyakumari Environmental Foot March, 1008 and 108 Kundiya Yajnas, and youth motivation programs. She has been honored with several prestigious national recognitions for her service and devotion.</p>
+                    </div>
+                </div>
+
+                <!-- Gallery -->
+                <div style="margin-top: 60px;">
+                    <h3 class="text-center" style="color: var(--accent-gold); font-family: var(--font-heading); font-size: 1.8rem;">Glimpses of Grace</h3>
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <img src="assets/founder1.png" alt="Devi Maa blessing devotees">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/founder3.png" alt="Devi Maa at the ashram">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/founder4.png" alt="Devi Maa full length portrait">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 4. Footer -->
+    <footer style="text-align: center; padding: 20px; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 50px;">
+        <p style="color: var(--text-gray); font-size: 0.9rem;">&copy; 2026 Aadi Shakti Devi Maa Ashram. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

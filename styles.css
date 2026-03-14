@@ -630,13 +630,13 @@ img {
     max-width: 800px;
     display: flex;
     justify-content: center;
-    margin-bottom: -20px; /* pull text up slightly */
+    margin-bottom: 20px; /* Give text breathing room */
     position: relative;
     z-index: 1;
 }
 
 .hero-durga-img {
-    max-height: 55vh;
+    max-height: 45vh;
     width: auto;
     max-width: 100%;
     object-fit: contain;
@@ -824,6 +824,102 @@ img {
 
 .image-card:hover .image-card-content p {
     opacity: 1;
+}
+
+/* Founder Profile Snippet */
+.founder-snippet {
+    margin-top: 60px;
+    background: linear-gradient(135deg, rgba(20, 5, 5, 0.95) 0%, rgba(30, 10, 10, 0.9) 100%);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    padding: 40px;
+}
+
+.founder-grid {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.founder-image-wrapper {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    padding: 10px;
+    background: linear-gradient(45deg, var(--accent-gold), transparent, var(--secondary-orange));
+    animation: rotateGradient 10s linear infinite;
+}
+
+@keyframes rotateGradient {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.founder-img-circle {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--bg-black);
+    position: relative;
+    z-index: 2;
+    /* Counter-rotate the image so it stays upright while the border spins */
+    animation: counterRotate 10s linear infinite;
+}
+
+@keyframes counterRotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(-360deg); }
+}
+
+.founder-glow {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%; height: 120%;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.2) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.founder-title {
+    font-size: 1.2rem;
+    color: var(--accent-gold);
+    margin-bottom: 20px;
+    font-family: var(--font-heading);
+    line-height: 1.4;
+}
+
+.founder-title span {
+    font-size: 2rem;
+    color: var(--text-white);
+    display: block;
+    margin-top: 5px;
+}
+
+.founder-bio {
+    color: var(--text-gray);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .founder-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .founder-image-wrapper {
+        margin: 0 auto;
+        width: 200px;
+        height: 200px;
+    }
+    
+    .founder-title span {
+        font-size: 1.5rem;
+    }
 }
 
 /*======================================================
