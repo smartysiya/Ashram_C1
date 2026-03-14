@@ -942,25 +942,26 @@ img {
     animation: float 6s ease-in-out infinite;
 }
 
-/* On mobile: logo appears first (top), text below */
+/* On mobile: logo appears first (top), text below - handled by HTML order now */
 @media (max-width: 768px) {
     .pryyas-grid {
         display: flex;
         flex-direction: column;
-    }
-
-    .pryyas-grid .pryyas-logo-wrapper {
-        order: 1;
+        align-items: center; /* Center logo and content */
         text-align: center;
     }
 
-    .pryyas-grid .pryyas-intro-text {
-        order: 2;
+    .pryyas-logo-wrapper {
+        margin-bottom: 20px;
     }
 
     .pryyas-logo-img {
-        max-width: 220px;
+        max-width: 180px; /* Slightly smaller on mobile as requested */
         margin: 0 auto;
+    }
+
+    .pillar-list li {
+        justify-content: center; /* Center list items on mobile */
     }
 }
 
@@ -1611,3 +1612,15 @@ img {
         opacity: 0;
     }
 }
+/* Shorten back button text on mobile */
+.back-text-full { display: inline !important; }
+.back-text-short { display: none !important; }
+
+@media (max-width: 768px) {
+    .back-text-full { display: none !important; }
+    .back-text-short { display: inline !important; }
+}
+
+/* Margin utilities for sub-headers */
+.mt-6 { margin-top: 4rem !important; }
+.mt-section { margin-top: 100px !important; }
