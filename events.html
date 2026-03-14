@@ -5,139 +5,244 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events & Festivals - Aadi Shakti Devi Maa Ashram</title>
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
     <style>
         .page-header {
             padding-top: 150px;
             padding-bottom: 50px;
             text-align: center;
-            background: linear-gradient(to bottom, rgba(122, 0, 0, 0.4), transparent);
+            background: linear-gradient(to bottom, rgba(122, 0, 0, 0.5), transparent);
         }
 
         .content-section {
-            padding: 50px 0;
-            max-width: 900px;
-            margin: 0 auto;
+            padding: 60px 0;
         }
-        
-        /* Reusing the event styles from index.html for consistency */
+
         .event-card {
-            margin-bottom: 30px;
+            margin-bottom: 35px;
         }
 
-        .event-action .btn {
-            width: 100%;
-            text-align: center;
-            margin-top: 10px;
+        /* ---- Event card layout ---- */
+        .ev-card {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            background: rgba(26, 4, 4, 0.85);
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            margin-bottom: 35px;
         }
 
+        .ev-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 50px rgba(212, 175, 55, 0.15);
+        }
+
+        .ev-img {
+            background-size: cover;
+            background-position: center;
+            min-height: 250px;
+        }
+
+        .ev-body {
+            padding: 32px 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 14px;
+        }
+
+        .ev-date-badge {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 106, 0, 0.12);
+            border: 1px solid var(--secondary-orange);
+            border-radius: 8px;
+            width: 68px;
+            height: 68px;
+            box-shadow: inset 0 0 10px rgba(255, 106, 0, 0.2);
+            flex-shrink: 0;
+        }
+
+        .ev-date-badge .day {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            line-height: 1;
+        }
+
+        .ev-date-badge .month {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: var(--text-white);
+            letter-spacing: 1px;
+        }
+
+        .ev-title-row {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .ev-title {
+            font-family: var(--font-heading);
+            font-size: 1.45rem;
+            color: var(--text-white);
+            margin: 0;
+        }
+
+        .ev-time {
+            color: var(--secondary-orange);
+            font-size: 0.9rem;
+        }
+
+        .ev-desc {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .ev-list {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            padding-left: 18px;
+            line-height: 1.8;
+        }
+
+        .ev-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 14px;
+            background: linear-gradient(135deg, rgba(212,175,55,0.04) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        /* Mobile responsive */
         @media (max-width: 768px) {
-            .horizontal-card {
+            .ev-card {
                 grid-template-columns: 1fr;
-                grid-template-rows: 200px auto;
+            }
+
+            .ev-img {
+                height: 220px;
+                min-height: unset;
+            }
+
+            .ev-body {
+                padding: 22px 18px;
+            }
+
+            .ev-title {
+                font-size: 1.2rem;
             }
         }
     </style>
 </head>
 
 <body>
-    <!-- 1. Header (Simplified) -->
+    <!-- Header -->
     <header class="header">
         <div class="header-top">
             <div class="logo">
                 <i class="fa-solid fa-om trishul-icon"></i>
             </div>
-            
             <div class="site-title">
-                <h1><a href="index.html">AADI SAKTI DEVI MAA ASHRAM</a></h1>
+                <h1><a href="index.html">AADI SHAKTI DEVI MAA ASHRAM</a></h1>
             </div>
-            
             <div class="header-contact">
-                <a href="index.html" class="btn btn-outline-gold rounded-btn">Back to Home</a>
+                <a href="index.html" class="btn btn-outline-gold rounded-btn">&larr; Back to Home</a>
             </div>
         </div>
     </header>
 
-    <!-- 2. Page Header -->
+    <!-- Page Hero -->
     <section class="page-header">
         <div class="container">
-            <h1 class="hero-title" style="font-size: 2.5rem; margin-bottom: 20px;">Events & Festivals</h1>
+            <h2 class="hero-title" style="font-size: 2.6rem; margin-bottom: 16px;">Events &amp; Festivals</h2>
             <div class="ornament-divider"></div>
-            <p style="color: var(--text-gray); max-width: 600px; margin: 20px auto;">Join our vibrant community celebrations. From intimate satsangs to grand multi-day festivals, there is a place for everyone to experience the Divine Mother's grace.</p>
+            <p style="color: var(--text-gray); max-width: 600px; margin: 20px auto 0; font-size: 1.05rem;">
+                Join our vibrant community celebrations. From intimate satsangs to grand multi-day festivals, there is a place for everyone to experience the Divine Mother's grace.
+            </p>
         </div>
     </section>
 
-    <!-- 3. Main Content -->
+    <!-- Events -->
     <section class="content-section">
-        <div class="container">
-            
-            <h3 style="margin-bottom: 30px; font-family: var(--font-heading); color: var(--accent-gold);">Upcoming Full Calendar</h3>
+        <div class="container" style="max-width: 960px;">
 
-            <!-- Event 1 (Detailed) -->
-            <div class="event-card luxury-card horizontal-card">
-                <div class="event-image" style="background-image: url('https://images.unsplash.com/photo-1601058269781-a95ab2f6c0cc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
-                <div class="event-details">
-                    <div class="event-date">
-                        <span class="day">15</span>
-                        <span class="month">OCT</span>
+            <h3 style="margin-bottom: 35px; font-family: var(--font-heading); color: var(--accent-gold); font-size: 1.3rem; letter-spacing: 1px;">
+                <i class="fa-regular fa-calendar" style="margin-right: 10px;"></i>Upcoming Events — 2026
+            </h3>
+
+            <!-- Event 1: Chaitra Navratri -->
+            <div class="ev-card">
+                <div class="ev-img" style="background-image: url('assets/navratri_festival.png');"></div>
+                <div class="ev-body">
+                    <div class="ev-title-row">
+                        <div class="ev-date-badge">
+                            <span class="day">02</span>
+                            <span class="month">APR</span>
+                        </div>
+                        <h3 class="ev-title">Chaitra Navratri Mahotsav</h3>
                     </div>
-                    <div class="event-info">
-                        <h4 style="font-size: 1.5rem; margin-bottom: 10px;">Chaitra Navratri Mahotsav</h4>
-                        <p class="event-time" style="color: var(--secondary-orange); margin-bottom: 15px;"><i class="fa-regular fa-clock"></i> Oct 15 - Oct 23 | 06:00 AM - 09:00 PM</p>
-                        <p class="event-desc">The grandest celebration of the year. Join us for 9 days of divine worship, akhand jyoti (eternal flame), vibrant cultural celebrations, garba, and deep devotion in honor of Maa Durga's nine divine forms.</p>
-                        <ul style="color: var(--text-gray); font-size: 0.9rem; margin-top: 10px; padding-left: 20px;">
-                            <li>Daily Chandi Path recitation</li>
-                            <li>Evening Maha Aarti with 108 lamps</li>
-                            <li>Free Prashadam dining (Bhandara) daily</li>
-                        </ul>
-                    </div>
-                    <div class="event-action" style="align-self: center;">
-                        <a href="index.html#contact" class="btn btn-gold-filled">RSVP & Volunteer</a>
+                    <p class="ev-time"><i class="fa-regular fa-clock"></i>&nbsp; Apr 2 – Apr 11 &nbsp;|&nbsp; 06:00 AM – 09:00 PM</p>
+                    <p class="ev-desc">The grandest celebration of the year. Join us for 9 days of divine worship, akhand jyoti (eternal flame), vibrant cultural celebrations, garba, and deep devotion in honor of Maa Durga's nine divine forms.</p>
+                    <ul class="ev-list">
+                        <li>Daily Chandi Path recitation</li>
+                        <li>Evening Maha Aarti with 108 lamps</li>
+                        <li>Free Prashadam dining (Bhandara) every day</li>
+                    </ul>
+                    <div>
+                        <a href="index.html#contact" class="btn btn-gold-filled" style="display: inline-block;">RSVP &amp; Volunteer</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Event 2 (Detailed) -->
-            <div class="event-card luxury-card horizontal-card">
-                <div class="event-image" style="background-image: url('https://images.unsplash.com/photo-1542838686-37ed7a7efd56?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
-                <div class="event-details">
-                    <div class="event-date">
-                        <span class="day">28</span>
-                        <span class="month">OCT</span>
+            <!-- Event 2: Monthly Satsang -->
+            <div class="ev-card">
+                <div class="ev-img" style="background-image: url('assets/satsang_meditation.png');"></div>
+                <div class="ev-body">
+                    <div class="ev-title-row">
+                        <div class="ev-date-badge">
+                            <span class="day">28</span>
+                            <span class="month">MAR</span>
+                        </div>
+                        <h3 class="ev-title">Monthly Spiritual Satsang</h3>
                     </div>
-                    <div class="event-info">
-                        <h4 style="font-size: 1.5rem; margin-bottom: 10px;">Monthly Spiritual Satsang</h4>
-                        <p class="event-time" style="color: var(--secondary-orange); margin-bottom: 15px;"><i class="fa-regular fa-clock"></i> 05:00 PM - 07:30 PM</p>
-                        <p class="event-desc">An evening of devotional bhajans, spiritual discourses, and profound meditation guided by our lead swamis. This month's discourse will focus on 'Finding Calm amidst the Storm' using wisdom from the Devi Mahatmya.</p>
-                    </div>
-                    <div class="event-action" style="align-self: center;">
-                        <a href="index.html#contact" class="btn btn-gold-filled">Free Entry</a>
+                    <p class="ev-time"><i class="fa-regular fa-clock"></i>&nbsp; 05:00 PM – 07:30 PM</p>
+                    <p class="ev-desc">An evening of devotional bhajans, spiritual discourses, and profound meditation guided by our lead swamis. This month's discourse focuses on <em>"Finding Calm amidst the Storm"</em> using wisdom from the Devi Mahatmya.</p>
+                    <div>
+                        <a href="index.html#contact" class="btn btn-gold-filled" style="display: inline-block;">Free Entry — Register</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Event 3 (Additional) -->
-             <div class="event-card luxury-card horizontal-card">
-                <div class="event-image" style="background-image: url('https://images.unsplash.com/photo-1604881880479-79883ebaeec9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
-                <div class="event-details">
-                    <div class="event-date">
-                        <span class="day">12</span>
-                        <span class="month">NOV</span>
+            <!-- Event 3: Diwali -->
+            <div class="ev-card">
+                <div class="ev-img" style="background-image: url('assets/diwali_temple.png');"></div>
+                <div class="ev-body">
+                    <div class="ev-title-row">
+                        <div class="ev-date-badge">
+                            <span class="day">20</span>
+                            <span class="month">OCT</span>
+                        </div>
+                        <h3 class="ev-title">Diwali Temple Lighting</h3>
                     </div>
-                    <div class="event-info">
-                        <h4 style="font-size: 1.5rem; margin-bottom: 10px;">Diwali Temple Lighting</h4>
-                        <p class="event-time" style="color: var(--secondary-orange); margin-bottom: 15px;"><i class="fa-regular fa-clock"></i> 06:00 PM - 10:00 PM</p>
-                        <p class="event-desc">Celebrate the festival of lights as we adorn the entire Ashram with thousands of earthen diyas. Special Lakshmi and Kali Puja will be conducted at midnight to usher in prosperity and destroy ignorance.</p>
-                    </div>
-                    <div class="event-action" style="align-self: center;">
-                        <a href="index.html#contact" class="btn btn-gold-filled">RSVP for Aarti</a>
+                    <p class="ev-time"><i class="fa-regular fa-clock"></i>&nbsp; 06:00 PM – 10:00 PM</p>
+                    <p class="ev-desc">Celebrate the festival of lights as we adorn the entire Ashram with thousands of earthen diyas. Special Lakshmi and Kali Puja will be conducted at midnight to usher in prosperity and destroy ignorance.</p>
+                    <div>
+                        <a href="index.html#contact" class="btn btn-gold-filled" style="display: inline-block;">RSVP for Aarti</a>
                     </div>
                 </div>
             </div>
@@ -145,9 +250,12 @@
         </div>
     </section>
 
-    <footer style="text-align: center; padding: 20px; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 50px;">
-        <p style="color: var(--text-gray); font-size: 0.9rem;">&copy; 2026 Aadi Shakti Devi Maa Ashram. All rights reserved.</p>
+    <footer style="text-align: center; padding: 24px; border-top: 1px solid rgba(255,255,255,0.08); margin-top: 20px;">
+        <p style="color: var(--text-gray); font-size: 0.9rem;">&copy; 2026 Aadi Shakti Devi Maa Ashram. All Rights Reserved.</p>
     </footer>
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
